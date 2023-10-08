@@ -1,0 +1,47 @@
+button {
+  cursor: pointer;
+  padding: 15px 25px;
+  outline: none;
+  border: none;
+  background-color: var(--bg);
+  border-radius: 5px;
+  color: var(--white);
+  transition: 0.2s ease-in-out;
+  text-overflow: ellipsis;
+}
+
+button:hover {
+  background-color: var(--active-dark);
+}
+
+button.active {
+  background-color: var(--active-dark);
+}
+
+button:disabled {
+  cursor: default;
+  background-color: #9b9b9b;
+  color: #e4e4e4;
+}
+
+button:disabled:hover {
+  animation: disBtn 0.2s ease-in-out;
+}
+
+@keyframes disBtn {
+  0% {
+    transform: translate(0px);
+  }
+
+  25% {
+    transform: translate(-3px);
+  }
+
+  50% {
+    transform: translate(3px);
+  }
+
+  100% {
+    transform: translate(0px);
+  }
+}
