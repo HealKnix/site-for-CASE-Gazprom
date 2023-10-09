@@ -39,7 +39,7 @@ function renderSelectingWorkScenarioPage() {
         Выберите сценарий работы
       </div>
       <div class='li__item-wrapper'>
-        <dropdown-menu placeholder='Сценарий работы' id='choice-scenario'>
+        <dropdown-menu class='invert' placeholder='Сценарий работы' id='choice-scenario'>
           <item>Контроль разливов нефти</item>
           <item>Оценка воздуха</item>
           <item>Ожидание</item>
@@ -104,6 +104,10 @@ function renderSelectingWorkScenarioPage() {
       }
       dropdown-menu {
         min-height: 55px;
+      }
+      dropdown-menu[focus].invert {
+        flex-direction: column-reverse;
+        top: -350px;
       }
       #btn-start {
         margin-bottom: 25px;
