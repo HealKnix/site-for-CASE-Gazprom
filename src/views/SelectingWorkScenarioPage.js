@@ -26,7 +26,11 @@ function renderSelectingWorkScenarioPage() {
       </div>
       <div class='li__item-wrapper'>
         <dropdown-menu placeholder='Объект исследования' title='' id='choice-object'>
+          <item>КП-1</item>
+          <item>КП-2</item>
+          <item>КП-3</item>
           <item>КП-4</item>
+          <item>КП-5</item>
         </dropdown-menu>
       </div>
     </li>
@@ -66,8 +70,6 @@ function renderSelectingWorkScenarioPage() {
       backdrop-filter: blur(10px);
       border-radius: 10px;
       max-width: 500px;
-      min-height: 85px;
-      font-weight: 500;
     }
     .choice-list {
       display: grid;
@@ -98,7 +100,7 @@ function renderSelectingWorkScenarioPage() {
       }
       dropdown-menu {
         position: relative;
-        min-height: auto;
+        min-height: 85px;
       }
     }
   `)

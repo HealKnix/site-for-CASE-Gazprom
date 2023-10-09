@@ -9,14 +9,6 @@ function dropdownMenuUpdate() {
     let value = placeholder
     let activeIndex = 0
 
-    let style = document.createElement('style')
-    style.innerHTML = `
-      dropdown-menu::before {
-        content: '${title}';
-      }
-    `
-    document.head.appendChild(style)
-
     dm.innerHTML = `<span>${value}</span>`
 
     dm.addEventListener('click', () => {
