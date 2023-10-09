@@ -10,7 +10,7 @@ function renderSelectingWorkScenarioPage() {
         Выберите устройство
       </div>
       <div class='li__item-wrapper'>
-        <dropdown-menu placeholder='Устройство' title='' id='choice-drone'>
+        <dropdown-menu placeholder='Устройство' id='choice-drone'>
           <item>Дрон 1</item>
           <item>Дрон 2</item>
           <item>Дрон 3</item>
@@ -25,7 +25,7 @@ function renderSelectingWorkScenarioPage() {
         Выберите объект исследования
       </div>
       <div class='li__item-wrapper'>
-        <dropdown-menu placeholder='Объект исследования' title='' id='choice-object'>
+        <dropdown-menu placeholder='Объект исследования' id='choice-object'>
           <item>КП-1</item>
           <item>КП-2</item>
           <item>КП-3</item>
@@ -39,7 +39,7 @@ function renderSelectingWorkScenarioPage() {
         Выберите сценарий работы
       </div>
       <div class='li__item-wrapper'>
-        <dropdown-menu placeholder='Сценарий работы' title='' id='choice-scenario'>
+        <dropdown-menu placeholder='Сценарий работы' id='choice-scenario'>
           <item>Контроль разливов нефти</item>
           <item>Оценка воздуха</item>
           <item>Ожидание</item>

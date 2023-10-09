@@ -44,6 +44,7 @@ dropdown-menu[focus]::-webkit-scrollbar-track {
 }
 
 dropdown-menu[focus]>span {
+  pointer-events: none;
   display: flex;
   align-items: center;
   min-height: inherit;
@@ -67,6 +68,10 @@ item:last-child {
 item.active {
   background-color: var(--active-dark);
   color: var(--white);
+}
+
+dropdown-menu:has(item)>span {
+  color: var(--active-dark);
 }
 
 dropdown-menu[focus]>item:hover:not(.active) {

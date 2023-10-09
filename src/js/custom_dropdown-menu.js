@@ -6,7 +6,7 @@ function dropdownMenuUpdate() {
     let placeholder = dm.getAttribute('placeholder')
     let items = [...dm.children]
     let itemNames = items.map(el => el.innerText)
-    let value = placeholder
+    let value = '-Выберите-'
     let activeIndex = 0
 
     dm.innerHTML = `<span>${value}</span>`
