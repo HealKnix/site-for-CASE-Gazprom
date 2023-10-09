@@ -3,11 +3,11 @@ dropdown-menu {
   display: flex;
   user-select: none;
   flex-direction: column;
+  justify-content: center;
   cursor: pointer;
   width: 100%;
-  padding: 5px;
-  margin-top: 20px;
-  border: 1px solid var(--dark-grey);
+  /* margin-top: 20px; */
+  border: 2px solid var(--bg);
   border-radius: 5px;
   will-change: auto;
 }
@@ -21,7 +21,14 @@ dropdown-menu::before {
 }
 
 dropdown-menu[focus] {
-  border: 1px solid var(--active-dark);
+  border: 2px solid var(--active-dark);
+  min-height: 150px;
+  z-index: 9999;
+}
+
+dropdown-menu>span {
+  pointer-events: none;
+  padding: 5px 25px;
 }
 
 dropdown-menu[focus]>span {
@@ -29,14 +36,11 @@ dropdown-menu[focus]>span {
   margin-bottom: 5px;
 }
 
-dropdown-menu>span {
-  pointer-events: none;
-  padding: 5px;
-}
-
 item {
-  padding: 5px;
+  padding: 15px 35px;
+  margin: 1px 0;
   border-radius: 5px;
+  font-size: 24px;
 }
 
 item.active {
