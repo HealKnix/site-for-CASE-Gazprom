@@ -47,7 +47,7 @@ dropdown-menu[focus]>span {
   display: flex;
   align-items: center;
   min-height: inherit;
-  border-bottom: 1px solid #bdbdbd;
+  border-bottom: 1px solid var(--dark-grey);
 }
 
 item {
