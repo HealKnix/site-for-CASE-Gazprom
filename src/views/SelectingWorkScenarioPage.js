@@ -9,15 +9,7 @@ let html = `
 <button id="btn-do-work">Начать работу</button>
 `
 
-let content = [...document.getElementsByTagName('hero')][0]
-
-export function render() {
+function renderSelectingWorkScenarioPage() {
   content.innerHTML = html
   setStyleCSS()
-}
-
-function setStyleCSS(styles) {
-  let style = document.createElement('style')
-  style.innerHTML = `${styles}`
-  content.appendChild(style)
 }

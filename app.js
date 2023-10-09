@@ -18,8 +18,12 @@ burgerMenu.addEventListener('mousedown', function () {
   }
 })
 
-import * as HomePage from '/src/views/HomePage.js'
-import * as ConnectedEmployeePag from '/src/views/ConnectedEmployeePage.js'
-import * as SelectingWorkScenarioPage from '/src/views/SelectingWorkScenarioPage.js'
+let content = [...document.getElementsByTagName('hero')][0]
 
-HomePage.render()
+function setStyleCSS(styles) {
+  let style = document.createElement('style')
+  style.innerHTML = `${styles}`
+  content.appendChild(style)
+}
+
+renderHomePage()
