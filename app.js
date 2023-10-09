@@ -6,4 +6,4 @@ function setStyleCSS(styles) {
   content.appendChild(style)
 }
 
-renderHomePage()
+renderConnectedEmployeePage()

@@ -153,6 +153,7 @@ hero {
   background-position: 120% center;
   background-size: 70%;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .info-text {

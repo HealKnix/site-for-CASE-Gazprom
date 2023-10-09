@@ -41,7 +41,7 @@ dropdown-menu>span {
 }
 
 dropdown-menu[focus]::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
 }
 
 dropdown-menu[focus]::-webkit-scrollbar-thumb {
