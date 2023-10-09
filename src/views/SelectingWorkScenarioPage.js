@@ -13,10 +13,10 @@ function renderSelectingWorkScenarioPage() {
         <dropdown-menu placeholder='Устройство' id='choice-drone' context='choice.device'>
           <item>Дрон 1</item>
           <item>Дрон 2</item>
-          <item>Дрон 3</item>
-          <item>Дрон 4</item>
           <item>АПУ-1</item>
           <item>АПУ-2</item>
+          <item>АПУ-3</item>
+          <item>АПУ-4</item>
         </dropdown-menu>
       </div>
     </li>
@@ -30,7 +30,6 @@ function renderSelectingWorkScenarioPage() {
           <item>КП-2</item>
           <item>КП-3</item>
           <item>КП-4</item>
-          <item>КП-5</item>
         </dropdown-menu>
       </div>
     </li>
