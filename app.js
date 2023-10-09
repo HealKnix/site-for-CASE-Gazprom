@@ -17,3 +17,9 @@ burgerMenu.addEventListener('mousedown', function () {
     menuOpen = false
   }
 })
+
+import * as HomePage from '/src/views/HomePage.js'
+import * as ConnectedEmployeePag from '/src/views/ConnectedEmployeePage.js'
+import * as SelectingWorkScenarioPage from '/src/views/SelectingWorkScenarioPage.js'
+
+HomePage.render()
