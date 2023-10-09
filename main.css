@@ -75,6 +75,7 @@ header>.menu {
   cursor: pointer;
   transition: var(--transition);
   z-index: 9999;
+  margin-right: 30px;
   will-change: transform;
 }
 
@@ -119,6 +120,15 @@ header>.menu {
 
 .burger-menu.open .line::after {
   transform: rotate(-45deg);
+}
+
+#img_user {
+  cursor: pointer;
+  scale: 0.9;
+}
+
+#img_logo {
+  cursor: pointer;
 }
 
 /*? HERO ?*/
