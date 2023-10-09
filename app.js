@@ -1,7 +1,3 @@
-let choiceDevice = ''
-let choiceObject = ''
-let choiceScenario = ''
-
 let content = [...document.getElementsByTagName('hero')][0]
 
 function setStyleCSS(styles) {
