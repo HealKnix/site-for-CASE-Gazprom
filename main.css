@@ -39,7 +39,11 @@ body {
 }
 
 .container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /*? HEADER ?*/
@@ -231,7 +235,7 @@ li>a {
   }
 
   .burger-menu.open {
-    transform: translate(130px, -90px);
+    transform: translate(150px, -90px);
   }
 
   .menu {
@@ -262,6 +266,6 @@ li>a {
   }
 
   .burger-menu.open {
-    transform: translate(100px, -90px);
+    transform: translate(130px, -90px);
   }
 }
