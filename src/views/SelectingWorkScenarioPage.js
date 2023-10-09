@@ -66,11 +66,13 @@ function renderSelectingWorkScenarioPage() {
       backdrop-filter: blur(10px);
       border-radius: 10px;
       max-width: 500px;
+      min-height: 85px;
       font-weight: 500;
     }
     .choice-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      min-height: 100px;
     }
     .bg-blur-page {
       position: absolute;
@@ -89,12 +91,14 @@ function renderSelectingWorkScenarioPage() {
       }
       .choice-list {
         grid-template-columns: 1fr;
+        min-height: auto;
       }
       .li__item-wrapper {
         margin-bottom: 25px;
       }
       dropdown-menu {
         position: relative;
+        min-height: auto;
       }
     }
   `)
