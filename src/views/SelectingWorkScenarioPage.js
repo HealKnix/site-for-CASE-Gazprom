@@ -10,7 +10,7 @@ function renderSelectingWorkScenarioPage() {
         Выберите устройство
       </div>
       <div class='li__item-wrapper'>
-        <dropdown-menu placeholder='Устройство' id='choice-drone'>
+        <dropdown-menu placeholder='Устройство' id='choice-drone' context='choice.device'>
           <item>Дрон 1</item>
           <item>Дрон 2</item>
           <item>Дрон 3</item>
@@ -25,7 +25,7 @@ function renderSelectingWorkScenarioPage() {
         Выберите объект исследования
       </div>
       <div class='li__item-wrapper'>
-        <dropdown-menu placeholder='Объект исследования' id='choice-object'>
+        <dropdown-menu placeholder='Объект исследования' id='choice-object' context='choice.researchObject'>
           <item>КП-1</item>
           <item>КП-2</item>
           <item>КП-3</item>
@@ -39,7 +39,7 @@ function renderSelectingWorkScenarioPage() {
         Выберите сценарий работы
       </div>
       <div class='li__item-wrapper'>
-        <dropdown-menu class='invert' placeholder='Сценарий работы' id='choice-scenario'>
+        <dropdown-menu class='invert' placeholder='Сценарий работы' id='choice-scenario' context='choice.workScenario'>
           <item>Контроль разливов нефти</item>
           <item>Оценка воздуха</item>
           <item>Ожидание</item>
@@ -54,10 +54,18 @@ function renderSelectingWorkScenarioPage() {
   <button
     id="btn-start"
     style='z-index: 0'
-    onclick='getChoiceValues()'>
+    onclick='printSomeInfo()'
+    disabled>
     Запуск
   </button>
   `
+  choice.method = () => {
+    if (choice.device && choice.researchObject && choice.workScenario) {
+      document.querySelector('#btn-start').removeAttribute('disabled')
+    } else {
+      document.querySelector('#btn-start').setAttribute('disabled', '')
+    }
+  }
   let bgBlur = document.querySelector('.bg-blur')
   bgBlur.classList.add('open')
   setStyleCSS(`
@@ -117,8 +125,6 @@ function renderSelectingWorkScenarioPage() {
   dropdownMenuUpdate()
 }
 
-function getChoiceValues() {
-  choiceDevice = document.getElementById('choice-drone').getAttribute('value')
-  choiceObject = document.getElementById('choice-object').getAttribute('value')
-  choiceScenario = document.getElementById('choice-scenario').getAttribute('value')
+function printSomeInfo() {
+  console.log('Сценарий успешно создан!')
 }

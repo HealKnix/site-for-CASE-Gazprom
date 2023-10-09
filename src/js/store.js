@@ -1,8 +1,18 @@
-let choice = {
+let choiceTarget = {
   device: undefined,
   researchObject: undefined,
-  workScenario: undefined
+  workScenario: undefined,
+  method: undefined
 }
+
+let choice = new Proxy(choiceTarget, {
+  set(target, prop, value) {
+    if (prop in target) {
+      target[prop] = value
+      target['method']()
+    }
+  }
+})
 
 class Device {
   constructor() {

@@ -3,6 +3,7 @@ function dropdownMenuUpdate() {
 
   dropdown_menus.forEach(dm => {
     let title = dm.getAttribute('title')
+    let context = dm.getAttribute('context')
     let placeholder = dm.getAttribute('placeholder')
     let items = [...dm.children]
     let itemNames = items.map(el => el.innerText)
@@ -34,6 +35,7 @@ function dropdownMenuUpdate() {
             value = items[i].innerText
             dm.setAttribute('value', value)
             activeIndex = i
+            eval(context + ' = "' + value + '"')
           })
         }
       }
