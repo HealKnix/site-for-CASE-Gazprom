@@ -93,14 +93,14 @@ function renderSelectingWorkScenarioPage() {
       }
       .choice-list {
         grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
         min-height: auto;
       }
       .li__item-wrapper {
         margin-bottom: 25px;
       }
       dropdown-menu {
-        position: relative;
-        min-height: 85px;
+        min-height: 55px;
       }
     }
   `)
