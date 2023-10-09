@@ -8,7 +8,7 @@ function renderConnectedEmployeePage() {
   for (let i = 0; i < droneList.length; i++) {
     let color = 'black'
     if (droneList[i].connectionQuality === 1) {
-      color = '#0bb56d'
+      color = 'var(--active-green-dark)'
     } else if (droneList[i].connectionQuality === 2) {
       color = '#adc584'
     } else if (droneList[i].connectionQuality === 3) {
@@ -45,7 +45,7 @@ function renderConnectedEmployeePage() {
     }
     .choice-list {
       display: grid;
-      grid-template-columns: 0.5fr 1fr 1fr 0.5fr 0.5fr 2fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr;
       min-height: 150px;
       justify-items: center;
       align-items: center;
