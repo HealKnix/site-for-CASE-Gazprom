@@ -159,14 +159,6 @@ hero {
   max-width: 50%;
 }
 
-#btn-do-work {
-  width: 450px;
-  padding: 25px 0;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 500;
-}
-
 /*? MENU ?*/
 
 .menu-wrapper>.left-menu {
@@ -224,7 +216,7 @@ li>a {
 }
 
 @media (width < 500px) {
-  #btn-do-work {
+  button {
     width: 100%;
   }
 
@@ -267,7 +259,7 @@ li>a {
     font-size: 20px;
   }
 
-  #btn-do-work {
+  button {
     font-size: 20px;
   }
 

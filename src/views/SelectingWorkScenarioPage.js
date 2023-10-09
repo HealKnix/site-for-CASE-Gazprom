@@ -52,7 +52,7 @@ function renderSelectingWorkScenarioPage() {
   </ul>
 
   <button
-    id="btn-do-work"
+    id="btn-start"
     style='z-index: 0'
     onclick='getChoiceValues()'>
     Запуск
@@ -91,6 +91,9 @@ function renderSelectingWorkScenarioPage() {
         overflow-y: auto;
         justify-content: inherit;
       }
+      .hero-text {
+        margin-top: 25px;
+      }
       .choice-list {
         grid-template-columns: 1fr;
         grid-auto-rows: 1fr;
@@ -101,6 +104,9 @@ function renderSelectingWorkScenarioPage() {
       }
       dropdown-menu {
         min-height: 55px;
+      }
+      #btn-start {
+        margin-bottom: 25px;
       }
     }
   `)
