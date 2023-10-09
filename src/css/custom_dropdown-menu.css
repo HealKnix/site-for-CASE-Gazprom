@@ -22,7 +22,6 @@ dropdown-menu::before {
 
 dropdown-menu[focus] {
   border: 2px solid var(--active-dark);
-  min-height: 150px;
   z-index: 9999;
 }
 
