@@ -63,6 +63,7 @@ function renderConnectedEmployeePage() {
   let menuWrapper = document.querySelector('.menu-wrapper')
   burgerMenu.classList.remove('open')
   menuWrapper.classList.remove('open')
+  menuOpen = false
   setStyleCSS(`
     hero {
       justify-content: inherit;
