@@ -19,9 +19,16 @@ class Device {
     this.name = parameters.name
     this.researchObject = parameters.researchObject
     this.status = parameters.status
-    this.connectionQuality = parameters.connectionQuality
     this.battery = parameters.battery
-    this.startUpTime = parameters.startUpTime
+    this.connectionQuality = parameters.connectionQuality
+    this.startUpTime = parameters.startUpTime + ' сек'
+
+    if (this.status === 'Подзарядка') {
+      this.connectionQuality = 3
+      this.startUpTime = '-'
+    } else if (this.status === 'Инициализация') {
+      this.startUpTime = 'Запуск'
+    }
   }
 
   printInfo() {
@@ -47,8 +54,7 @@ const droneList = [
     researchObject: 'КП-2',
     status: 'Инициализация',
     connectionQuality: 1,
-    battery: 100,
-    startUpTime: null
+    battery: 100
   }),
   new Device({
     name: 'АПУ-1',
@@ -70,9 +76,7 @@ const droneList = [
     name: 'АПУ-3',
     researchObject: 'КП-4',
     status: 'Подзарядка',
-    connectionQuality: 3,
-    battery: 30,
-    startUpTime: undefined
+    battery: 30
   }),
   new Device({
     name: 'АПУ-4',

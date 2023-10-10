@@ -53,7 +53,7 @@ function renderConnectedEmployeePage() {
           style='background-color: rgb(${currentColor.r},${currentColor.g},${currentColor.b});'
         ></div>
       </div>
-      <div id='list-time'>Время с момента запуска: <br> ${droneList[i].startUpTime} сек.</div>
+      <div id='list-time'>Время с момента запуска: <br> ${droneList[i].startUpTime} </div>
       <button onclick='droneList[${i}].control()'>Управление</button>
     </li>`
     document.querySelectorAll('#list-battery-lvl')[i].style.width = droneList[i].battery + '%'
