@@ -21,7 +21,7 @@ class Device {
     this.status = parameters.status
     this.battery = parameters.battery
     this.connectionQuality = parameters.connectionQuality
-    this.startUpTime = parameters.startUpTime + ' сек'
+    this.startUpTime = (parameters.startUpTime / 60).toFixed(1) + ' мин'
 
     if (this.status === 'Подзарядка') {
       this.connectionQuality = 3
@@ -47,7 +47,7 @@ const droneList = [
     status: 'Разведка',
     connectionQuality: 2,
     battery: 60,
-    startUpTime: 600
+    startUpTime: 611
   }),
   new Device({
     name: 'Дрон-2',
