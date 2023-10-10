@@ -53,7 +53,6 @@ function renderSelectingWorkScenarioPage() {
   <button
     id="btn-start"
     style='z-index: 0'
-    onclick='printSomeInfo()'
     disabled>
     Запуск
   </button>
@@ -73,14 +72,14 @@ function renderSelectingWorkScenarioPage() {
     }
     dropdown-menu {
       position: absolute;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(10px);
       border-radius: 10px;
       max-width: 500px;
     }
     .choice-list {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.65fr 1fr;
       min-height: 100px;
     }
     .bg-blur-page {
@@ -122,8 +121,4 @@ function renderSelectingWorkScenarioPage() {
     }
   `)
   dropdownMenuUpdate()
-}
-
-function printSomeInfo() {
-  console.log('Сценарий успешно создан!')
 }

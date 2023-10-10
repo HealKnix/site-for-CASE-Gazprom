@@ -4,10 +4,11 @@ dropdown-menu {
   cursor: pointer;
   width: 100%;
   min-height: 85px;
-  max-height: 415px;
-  border: 2px solid var(--bg);
+  /* outline: 1px solid #3333333d; */
+  box-shadow: 0 8px 15px #3333333d;
   border-radius: 5px;
   font-weight: 500;
+  transition: var(--transition);
   will-change: auto;
 }
 
@@ -15,7 +16,9 @@ dropdown-menu[focus] {
   display: flex;
   flex-direction: column;
   cursor: default;
-  border: 2px solid var(--active-dark);
+  /* outline: 1px solid var(--active-dark); */
+  box-shadow: 0 8px 15px #037ced42;
+  max-height: 415px;
   overflow-y: auto;
   z-index: 9999;
 }
