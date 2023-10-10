@@ -64,6 +64,23 @@ dropdown-menu[focus]>span {
   border-bottom: 1px solid var(--dark-grey);
 }
 
+dropdown-menu>span::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: calc(100% - 45px);
+  transform: translate3d(0, -50%, 0);
+  border-radius: 50%;
+  background-color: var(--secondary);
+}
+
+dropdown-menu:not([value=''])>span::after {
+  background-color: var(--active-green-dark);
+}
+
 item {
   padding: 15px 25px;
   margin: 1px 0;
