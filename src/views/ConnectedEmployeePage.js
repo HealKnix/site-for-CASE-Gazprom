@@ -14,7 +14,7 @@ function renderConnectedEmployeePage() {
 
   <h1 class="hero-text" style='z-index: 1'>Подключённый работник</h1>
 
-  <ul id='list-devices' style='z-index: 1'>`
+  <ul id='list-devices' style='z-index: 1'></ul>`
   for (let i = 0; i < droneList.length; i++) {
     let colorWebSVG = 'black'
     if (droneList[i].connectionQuality === 1) {
@@ -35,7 +35,7 @@ function renderConnectedEmployeePage() {
         (colorFull.b * droneList[i].battery) / 100 +
         (colorEmpty.b - (colorEmpty.b * droneList[i].battery) / 100)
     }
-    content.innerHTML += `
+    document.querySelector('#list-devices').innerHTML += `
     <li class='choice-list' style='z-index: 1'>
       <div id='list-name'>${droneList[i].name}</div>
       <!-- <div id='list-img'>${droneList[i].img}</div> -->
@@ -58,7 +58,6 @@ function renderConnectedEmployeePage() {
     </li>`
     document.querySelectorAll('#list-battery-lvl')[i].style.width = droneList[i].battery + '%'
   }
-  content.innerHTML += `</ul>`
   let burgerMenu = document.querySelector('.burger-menu')
   let menuWrapper = document.querySelector('.menu-wrapper')
   burgerMenu.classList.remove('open')
@@ -68,6 +67,7 @@ function renderConnectedEmployeePage() {
     hero {
       justify-content: inherit;
       padding: 0;
+      overflow-y: none;
     }
     .hero-text {
       padding: 0 5%;
@@ -79,14 +79,12 @@ function renderConnectedEmployeePage() {
       justify-items: center;
       align-items: center;
       text-align: center;
-      background-color: #000000aa;
-      backdrop-filter: blur(10px);
       font-size: 18px;
       margin: 0;
       padding: 0 5%;
     }
     .choice-list {
-      border-bottom: 2px solid #333;
+      border-bottom: 2px solid #333333aa;
     }
     .choice-list > button {
       width: 225px;
@@ -109,6 +107,14 @@ function renderConnectedEmployeePage() {
       z-index: 0;
     }
 
+    #list-devices {
+      width: 100%;
+      height: 100%;
+      background-color: #000000bb;
+      backdrop-filter: blur(10px);
+      overflow-y: auto;
+    }
+
     #list-connect {
       width: 50px;
       height: 50px;
@@ -126,7 +132,7 @@ function renderConnectedEmployeePage() {
     }
     #list-battery > span {
       color: white;
-      filter: drop-shadow(0 0 1px #00000088);
+      filter: drop-shadow(0 0 3px #000000aa);
       z-index: 2;
     }
     #list-battery::after {
