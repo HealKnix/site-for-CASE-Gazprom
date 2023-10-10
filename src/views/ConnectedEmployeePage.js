@@ -38,7 +38,7 @@ function renderConnectedEmployeePage() {
     document.querySelector('#list-devices').innerHTML += `
     <li class='choice-list' style='z-index: 1'>
       <div id='list-name'>${droneList[i].name}</div>
-      <!-- <div id='list-img'>${droneList[i].img}</div> -->
+      <div id='list-img' style='background: url(${droneList[i].imageUrl}) no-repeat center'></div>
       <div id='list-status'>Статус: ${droneList[i].researchObject} <br> (${droneList[i].status})</div>
 
       <svg id='list-connect' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
@@ -74,7 +74,7 @@ function renderConnectedEmployeePage() {
     }
     .choice-list {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr;
       min-height: 150px;
       justify-items: center;
       align-items: center;
@@ -115,6 +115,13 @@ function renderConnectedEmployeePage() {
       overflow-y: auto;
     }
 
+    #list-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
     #list-connect {
       width: 50px;
       height: 50px;

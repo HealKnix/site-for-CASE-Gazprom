@@ -40,8 +40,29 @@ class Device {
   }
 }
 
+class Drone1 extends Device {
+  imageUrl = 'src/img/Devices/dron-1.png'
+  constructor(parameters) {
+    super(parameters)
+  }
+}
+
+class Drone2 extends Device {
+  imageUrl = 'src/img/Devices/dron-2.png'
+  constructor(parameters) {
+    super(parameters)
+  }
+}
+
+class APU1 extends Device {
+  imageUrl = 'src/img/Devices/APU-1.png'
+  constructor(parameters) {
+    super(parameters)
+  }
+}
+
 const droneList = [
-  new Device({
+  new Drone1({
     name: 'Дрон-1',
     researchObject: 'КП-1',
     status: 'Разведка',
@@ -49,14 +70,14 @@ const droneList = [
     battery: 60,
     startUpTime: 611
   }),
-  new Device({
+  new Drone2({
     name: 'Дрон-2',
     researchObject: 'КП-2',
     status: 'Инициализация',
     connectionQuality: 1,
     battery: 100
   }),
-  new Device({
+  new APU1({
     name: 'АПУ-1',
     researchObject: 'КП-3',
     status: 'Оценка воздуха',
@@ -64,7 +85,7 @@ const droneList = [
     battery: 30,
     startUpTime: 1200
   }),
-  new Device({
+  new APU1({
     name: 'АПУ-2',
     researchObject: 'КП-4',
     status: 'Готовность',
@@ -72,13 +93,13 @@ const droneList = [
     battery: 100,
     startUpTime: 0
   }),
-  new Device({
+  new APU1({
     name: 'АПУ-3',
     researchObject: 'КП-4',
     status: 'Подзарядка',
     battery: 30
   }),
-  new Device({
+  new APU1({
     name: 'АПУ-4',
     researchObject: 'КП-1',
     status: 'Ожидание',
