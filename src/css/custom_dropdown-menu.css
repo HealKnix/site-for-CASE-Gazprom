@@ -71,7 +71,7 @@ dropdown-menu>span::after {
   width: 10px;
   height: 10px;
   top: 50%;
-  left: calc(100% - 45px);
+  left: 90%;
   transform: translate3d(0, -50%, 0);
   border-radius: 50%;
   background-color: var(--secondary);
