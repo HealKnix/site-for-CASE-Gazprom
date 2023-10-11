@@ -1,5 +1,5 @@
 function renderSelectingWorkScenarioPage() {
-  content.innerHTML = `
+  content.innerHTML = String.raw`
   <div class='bg-blur-page'></div>
 
   <h1 class="hero-text" style='z-index: 1'>Выбор сценария работы</h1>

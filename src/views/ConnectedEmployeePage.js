@@ -9,12 +9,13 @@ function renderConnectedEmployeePage() {
     g: 25,
     b: 0
   }
-  content.innerHTML = `
+  content.innerHTML = String.raw`
   <div class='bg-blur-page'></div>
 
   <h1 class="hero-text" style='z-index: 1'>Подключённый работник</h1>
 
   <ul id='list-devices' style='z-index: 1'></ul>`
+
   for (let i = 0; i < droneList.length; i++) {
     let colorWebSVG = 'black'
     if (droneList[i].connectionQuality === 1) {
@@ -35,7 +36,8 @@ function renderConnectedEmployeePage() {
         (colorFull.b * droneList[i].battery) / 100 +
         (colorEmpty.b - (colorEmpty.b * droneList[i].battery) / 100)
     }
-    document.querySelector('#list-devices').innerHTML += `
+
+    document.querySelector('#list-devices').innerHTML += String.raw`
     <li class='choice-list' style='z-index: 1'>
       <div id='list-name'>${droneList[i].name}</div>
       <div id='list-img' style='background: url(${droneList[i].imageUrl}) no-repeat center'></div>
@@ -56,6 +58,7 @@ function renderConnectedEmployeePage() {
       <div id='list-time'>Время с момента запуска: <br> ${droneList[i].startUpTime} </div>
       <button id='btn-control' onclick='droneList[${i}].control()'>Управление</button>
     </li>`
+
     document.querySelectorAll('#list-battery-lvl')[i].style.width = droneList[i].battery + '%'
   }
   let burgerMenu = document.querySelector('.burger-menu')
