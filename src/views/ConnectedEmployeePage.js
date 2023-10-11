@@ -54,7 +54,7 @@ function renderConnectedEmployeePage() {
         ></div>
       </div>
       <div id='list-time'>Время с момента запуска: <br> ${droneList[i].startUpTime} </div>
-      <button onclick='droneList[${i}].control()'>Управление</button>
+      <button id='btn-control' onclick='droneList[${i}].control()'>Управление</button>
     </li>`
     document.querySelectorAll('#list-battery-lvl')[i].style.width = droneList[i].battery + '%'
   }
@@ -74,7 +74,7 @@ function renderConnectedEmployeePage() {
     }
     .choice-list {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr;
+      grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1.25fr;
       min-height: 150px;
       justify-items: center;
       align-items: center;
@@ -113,6 +113,15 @@ function renderConnectedEmployeePage() {
       background-color: #000000bb;
       backdrop-filter: blur(10px);
       overflow-y: auto;
+    }
+    #list-devices::-webkit-scrollbar {
+      width: 4px;
+    }
+    #list-devices::-webkit-scrollbar-thumb {
+      background-color: var(--active-green-dark);
+    }
+    #list-devices::-webkit-scrollbar-track {
+      background-color: transparent;
     }
 
     #list-img {
@@ -164,6 +173,13 @@ function renderConnectedEmployeePage() {
       z-index: 1;
     }
 
+    #btn-control {
+      background-color: var(--active-green-dark)
+    }
+    #btn-control:hover {
+      background-color: #0b886d;
+    }
+
     @media (width < 685px) {
       hero {
         overflow-y: auto;
@@ -176,6 +192,14 @@ function renderConnectedEmployeePage() {
         grid-template-columns: 1fr;
         grid-auto-rows: 1fr;
         min-height: auto;
+      }
+    }
+    @media (width < 1120px) {
+      .choice-list {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        min-height: 500px;
+        padding: 25px 0;
       }
     }
   `)

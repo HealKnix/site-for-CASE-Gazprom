@@ -4,7 +4,7 @@ checkboxes.forEach(cb => {
   let title = cb.getAttribute('title')
   let width = cb.getAttribute('width') || 50
   cb.innerHTML = `
-    <div class="checkbox-wrapper" style='--checkbox-size: ${width}px'>
+    <div class="checkbox-wrapper" style="--checkbox-size: ${width}px">
       <span class="title">${title}</span>
       <div class="checkbox">
         <input type="checkbox" />
