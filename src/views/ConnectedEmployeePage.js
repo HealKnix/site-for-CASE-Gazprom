@@ -9,7 +9,7 @@ function renderConnectedEmployeePage() {
     g: 25,
     b: 0
   }
-  content.innerHTML = String.raw`
+  content.innerHTML = /*html*/ `
   <div class='bg-blur-page'></div>
 
   <h1 class="hero-text" style='z-index: 1'>Подключённый работник</h1>
@@ -37,7 +37,7 @@ function renderConnectedEmployeePage() {
         (colorEmpty.b - (colorEmpty.b * droneList[i].battery) / 100)
     }
 
-    document.querySelector('#list-devices').innerHTML += String.raw`
+    document.querySelector('#list-devices').innerHTML += /*html*/ `
     <li class='choice-list' style='z-index: 1'>
       <div id='list-name'>${droneList[i].name}</div>
       <div id='list-img' style='background: url(${droneList[i].imageUrl}) no-repeat center'></div>
@@ -66,7 +66,7 @@ function renderConnectedEmployeePage() {
   burgerMenu.classList.remove('open')
   menuWrapper.classList.remove('open')
   menuOpen = false
-  setStyleCSS(`
+  setStyleCSS(/*css*/ `
     hero {
       justify-content: inherit;
       padding: 0;
@@ -147,7 +147,7 @@ function renderConnectedEmployeePage() {
       height: 35px;
       border: 2px solid white;
       border-radius: 7.5px;
-      overflow:
+      overflow: ;
     }
     #list-battery > span {
       color: white;
@@ -177,7 +177,7 @@ function renderConnectedEmployeePage() {
     }
 
     #btn-control {
-      background-color: var(--active-green-dark)
+      background-color: var(--active-green-dark);
     }
     #btn-control:hover {
       background-color: #0b886d;

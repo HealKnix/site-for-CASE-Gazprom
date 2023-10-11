@@ -1,5 +1,5 @@
 function renderSelectingWorkScenarioPage() {
-  content.innerHTML = String.raw`
+  content.innerHTML = /*html*/ `
   <div class='bg-blur-page'></div>
 
   <h1 class="hero-text" style='z-index: 1'>Выбор сценария работы</h1>
@@ -64,9 +64,11 @@ function renderSelectingWorkScenarioPage() {
       document.querySelector('#btn-start').setAttribute('disabled', '')
     }
   }
+
   let bgBlur = document.querySelector('.bg-blur')
   bgBlur.classList.add('open')
-  setStyleCSS(`
+
+  setStyleCSS(/*css*/ `
     .li__item-wrapper {
       position: relative;
     }

@@ -1,5 +1,5 @@
 function renderHomePage() {
-  content.innerHTML = String.raw`
+  content.innerHTML = /*html*/ `
     <h1 class="hero-text">Будущее за технологиями.</h1>
 
     <h2 class="info-text">
