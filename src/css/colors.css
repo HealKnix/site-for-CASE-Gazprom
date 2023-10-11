@@ -4,9 +4,17 @@
   --primary-light: #fd8760;
   --secondary: #242a38;
   --dark-grey: #4e596f;
-  --white: #ffffff;
+  --active-blue: #a4e8ca;
   --active-light: #04c9fe;
+  --active-between: #174059;
   --active-dark: #037ded;
   --active-green-light: #10ffb9;
   --active-green-dark: #0bb56d;
+  --active-lime: #bdde0f;
+  --white: #ffffff;
+  --white-sweet: #d8d7ff;
+  --active-yellow: #f8b61d;
+  --active-orange: #ff7028;
+  --active-purple-light: #5b1fbf;
+  --active-purple-dark: #390979;
 }
