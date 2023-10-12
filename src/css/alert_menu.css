@@ -17,7 +17,7 @@
 
 .alert-menu.show {
   transform: translate3d(-50%, 15px, 0);
-  box-shadow: 0 8px 15px #33333333;
+  box-shadow: 0 8px 15px #d8d7ff88;
 }
 
 .alert-menu>span {
