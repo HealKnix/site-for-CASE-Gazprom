@@ -56,7 +56,7 @@ function renderConnectedEmployeePage() {
         ></div>
       </div>
       <div id='list-time'>Время с момента запуска: <br> ${droneList[i].startUpTime} </div>
-      <button id='btn-control' onclick='droneList[${i}].control()'>Управление</button>
+      <button id='btn-control' onclick='redirectOnControlPage(${i})'>Управление</button>
     </li>`
 
     document.querySelectorAll('#list-battery-lvl')[i].style.width = droneList[i].battery + '%'
@@ -77,7 +77,7 @@ function renderConnectedEmployeePage() {
     }
     .choice-list {
       display: grid;
-      grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1.25fr;
+      grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 2fr 1.25fr;
       min-height: 150px;
       justify-items: center;
       align-items: center;
@@ -207,4 +207,8 @@ function renderConnectedEmployeePage() {
     }
   `)
   dropdownMenuUpdate()
+}
+
+function redirectOnControlPage(index) {
+  renderControlDevicePage(droneList[index])
 }
