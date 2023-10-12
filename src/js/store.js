@@ -9,7 +9,9 @@ let choice = new Proxy(choiceTarget, {
   set(target, prop, value) {
     if (prop in target) {
       target[prop] = value
-      target['method']()
+      if (target['method']) {
+        target['method']()
+      }
     }
   }
 })
