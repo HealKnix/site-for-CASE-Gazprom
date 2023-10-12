@@ -7,7 +7,15 @@ function renderHomePage() {
       процесса
     </h2>
 
-    <button id="btn-do-work" onclick="renderSelectingWorkScenarioPage()">Начать работу</button>
+    <button id="btn-do-work" onclick="checkUserAuthAndRedirect()">Начать работу</button>
   `
   setStyleCSS()
+}
+
+function checkUserAuthAndRedirect() {
+  if (!isUserAuth) {
+    showAlertMenu('Вы не авторизовались')
+    return
+  }
+  renderSelectingWorkScenarioPage()
 }

@@ -4,6 +4,7 @@
 @import url('src/css/custom_button.css');
 @import url('src/css/custom_range.css');
 @import url('src/css/custom_dropdown-menu.css');
+@import url('src/css/alert_menu.css');
 
 :root {
   --index: 1vw + 1vh;

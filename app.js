@@ -6,4 +6,8 @@ function setStyleCSS(styles) {
   content.appendChild(style)
 }
 
+function setUserAuth() {
+  isUserAuth = confirm('Авторизоваться?')
+}
+
 renderHomePage()

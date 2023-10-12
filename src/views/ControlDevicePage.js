@@ -5,8 +5,6 @@ function renderControlDevicePage(currentDevice) {
     <h2 class="info-text">
       Экран камеры*
     </h2>
-
-    <button id="btn-do-work" onclick="renderSelectingWorkScenarioPage()">Начать работу</button>
   `
   setStyleCSS()
 }

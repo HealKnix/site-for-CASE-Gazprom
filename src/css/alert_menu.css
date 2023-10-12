@@ -1,0 +1,26 @@
+.alert-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 340px;
+  height: 90px;
+  left: 50%;
+  transform: translate3d(-50%, -100%, 0);
+  background-color: var(--white);
+  border-bottom: 3px solid var(--primary-dark);
+  border-radius: 10px;
+  padding: 5px;
+  transition: 0.2s ease-in-out;
+  z-index: 99999;
+}
+
+.alert-menu.show {
+  transform: translate3d(-50%, 15px, 0);
+  box-shadow: 0 4px 15px #f54b6433;
+}
+
+.alert-menu>span {
+  font-size: 18px;
+  font-weight: 500;
+}

@@ -12,6 +12,8 @@
     <script src="src/js/custom_checkbox.js" defer></script>
     <script src="src/js/custom_dropdown-menu.js" defer></script>
 
+    <script src="src/assets/AlertMenu.js" defer></script>
+
     <script src="src/views/HomePage.js" defer></script>
     <script src="src/views/ControlDevicePage.js" defer></script>
     <script src="src/views/ConnectedEmployeePage.js" defer></script>
@@ -21,6 +23,7 @@
   </head>
 
   <body>
+    <AlertMenu></AlertMenu>
     <div class="container">
       <header>
         <div class="menu">
@@ -28,7 +31,7 @@
           <div class="burger-menu">
             <div class="line"></div>
           </div>
-          <img src="src/img/user.svg" id="img_user" width="30" />
+          <img src="src/img/user.svg" id="img_user" width="30" onclick="setUserAuth()" />
         </div>
         <img
           src="src/img/logo.svg"

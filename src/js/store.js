@@ -16,6 +16,8 @@ let choice = new Proxy(choiceTarget, {
   }
 })
 
+let isUserAuth = false
+
 class Device {
   constructor(parameters) {
     this.name = parameters.name

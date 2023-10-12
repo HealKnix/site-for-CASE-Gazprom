@@ -1,62 +1,63 @@
 function renderSelectingWorkScenarioPage() {
   content.innerHTML = /*html*/ `
-  <div class='bg-blur-page'></div>
+    <div class='bg-blur-page'></div>
 
-  <h1 class="hero-text" style='z-index: 1'>Выбор сценария работы</h1>
+    <h1 class="hero-text" style='z-index: 1'>Выбор сценария работы</h1>
 
-  <ul style='z-index: 1'>
-    <li class='choice-list'>
-      <div class='li__item-wrapper'>
-        Выберите устройство
-      </div>
-      <div class='li__item-wrapper'>
-        <dropdown-menu placeholder='Устройство' id='choice-drone' value='' context='choice.device'>
-          <item>Дрон 1</item>
-          <item>Дрон 2</item>
-          <item>АПУ-1</item>
-          <item>АПУ-2</item>
-          <item>АПУ-3</item>
-          <item>АПУ-4</item>
-        </dropdown-menu>
-      </div>
-    </li>
-    <li class='choice-list'>
-      <div class='li__item-wrapper'>
-        Выберите объект исследования
-      </div>
-      <div class='li__item-wrapper'>
-        <dropdown-menu placeholder='Объект исследования' id='choice-object' value='' context='choice.researchObject'>
-          <item>КП-1</item>
-          <item>КП-2</item>
-          <item>КП-3</item>
-          <item>КП-4</item>
-        </dropdown-menu>
-      </div>
-    </li>
-    <li class='choice-list'>
-      <div class='li__item-wrapper'>
-        Выберите сценарий работы
-      </div>
-      <div class='li__item-wrapper'>
-        <dropdown-menu class='invert' placeholder='Сценарий работы' id='choice-scenario' value='' context='choice.workScenario'>
-          <item>Контроль разливов нефти</item>
-          <item>Оценка воздуха</item>
-          <item>Ожидание</item>
-          <item>Разведка кустовой площадки</item>
-          <item>Перевозка грузов</item>
-          <item>Ручной режим</item>
-        </dropdown-menu>
-      </div>
-    </li>
-  </ul>
+    <ul style='z-index: 1'>
+      <li class='choice-list'>
+        <div class='li__item-wrapper'>
+          Выберите устройство
+        </div>
+        <div class='li__item-wrapper'>
+          <dropdown-menu placeholder='Устройство' id='choice-drone' value='' context='choice.device'>
+            <item>Дрон 1</item>
+            <item>Дрон 2</item>
+            <item>АПУ-1</item>
+            <item>АПУ-2</item>
+            <item>АПУ-3</item>
+            <item>АПУ-4</item>
+          </dropdown-menu>
+        </div>
+      </li>
+      <li class='choice-list'>
+        <div class='li__item-wrapper'>
+          Выберите объект исследования
+        </div>
+        <div class='li__item-wrapper'>
+          <dropdown-menu placeholder='Объект исследования' id='choice-object' value='' context='choice.researchObject'>
+            <item>КП-1</item>
+            <item>КП-2</item>
+            <item>КП-3</item>
+            <item>КП-4</item>
+          </dropdown-menu>
+        </div>
+      </li>
+      <li class='choice-list'>
+        <div class='li__item-wrapper'>
+          Выберите сценарий работы
+        </div>
+        <div class='li__item-wrapper'>
+          <dropdown-menu class='invert' placeholder='Сценарий работы' id='choice-scenario' value='' context='choice.workScenario'>
+            <item>Контроль разливов нефти</item>
+            <item>Оценка воздуха</item>
+            <item>Ожидание</item>
+            <item>Разведка кустовой площадки</item>
+            <item>Перевозка грузов</item>
+            <item>Ручной режим</item>
+          </dropdown-menu>
+        </div>
+      </li>
+    </ul>
 
-  <button
-    id="btn-start"
-    style='z-index: 0'
-    disabled>
-    Запуск
-  </button>
+    <button
+      id="btn-start"
+      style='z-index: 0'
+      disabled>
+      Запуск
+    </button>
   `
+
   choice.method = () => {
     if (choice.device && choice.researchObject && choice.workScenario) {
       document.querySelector('#btn-start').removeAttribute('disabled')
