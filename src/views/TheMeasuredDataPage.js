@@ -57,7 +57,7 @@ function renderTheMeasuredDataPage() {
           <div id='list-data-sending__loader'>
             <span id="list-data-sending__loader__percentage">${droneList[i].battery}%</span>
             <svg width="150" height="150" style="transform: rotate(-90deg)">
-              <circle class="myCircle" cx="75" cy="75" r="37.5" fill="none" stroke="rgb(${currentColor.r}, ${currentColor.g}, ${currentColor.b})" stroke-width="15" />
+              <circle class="myCircle" cx="75" cy="75" r="37.5" fill="none" stroke="rgb(${currentColor.r}, ${currentColor.g}, ${currentColor.b})" stroke-width="15" stroke-linecap="round" />
             </svg>
           </div>
         </div>
@@ -69,7 +69,7 @@ function renderTheMeasuredDataPage() {
     var radius = parseInt(circle.getAttribute('r'))
     var circumference = 2 * Math.PI * radius
 
-    var sliderValue = parseInt(98 - droneList[i].battery)
+    var sliderValue = parseInt(100 - droneList[i].battery)
     var newLength = circumference - (sliderValue / 100) * circumference /* Изменение направления */
 
     circle.style.strokeDasharray = newLength + ' ' + circumference
