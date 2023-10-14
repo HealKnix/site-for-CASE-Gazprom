@@ -101,7 +101,7 @@ function renderSelectingWorkScenarioPage() {
         justify-content: inherit;
       }
       .hero-text {
-        margin-top: 25px;
+        padding: 15px 5%;
       }
       .choice-list {
         grid-template-columns: 1fr;

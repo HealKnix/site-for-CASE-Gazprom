@@ -25,13 +25,22 @@ class Device {
     this.status = parameters.status
     this.battery = parameters.battery
     this.connectionQuality = parameters.connectionQuality
+    this.connectionQualityText = ''
     this.startUpTime = (parameters.startUpTime / 60).toFixed(1) + ' мин'
 
     if (this.status === 'Подзарядка') {
-      this.connectionQuality = 3
+      this.connectionQuality = 0
       this.startUpTime = '-'
     } else if (this.status === 'Инициализация') {
       this.startUpTime = 'Запуск'
+    }
+
+    if (this.connectionQuality == 0) {
+      this.connectionQualityText = ''
+    } else if (this.connectionQuality == 1) {
+      this.connectionQualityText = ''
+    } else if (this.connectionQuality == 2) {
+      this.connectionQualityText = 'средне-стабильное'
     }
   }
 
@@ -70,7 +79,7 @@ const droneList = [
     name: 'Дрон-1',
     researchObject: 'КП-1',
     status: 'Разведка',
-    connectionQuality: 2,
+    connectionQuality: 1,
     battery: 60,
     startUpTime: 611
   }),
@@ -78,14 +87,14 @@ const droneList = [
     name: 'Дрон-2',
     researchObject: 'КП-2',
     status: 'Инициализация',
-    connectionQuality: 1,
+    connectionQuality: 2,
     battery: 100
   }),
   new APU1({
     name: 'АПУ-1',
     researchObject: 'КП-3',
     status: 'Оценка воздуха',
-    connectionQuality: 1,
+    connectionQuality: 2,
     battery: 30,
     startUpTime: 1200
   }),
@@ -93,7 +102,7 @@ const droneList = [
     name: 'АПУ-2',
     researchObject: 'КП-4',
     status: 'Готовность',
-    connectionQuality: 1,
+    connectionQuality: 2,
     battery: 100,
     startUpTime: 0
   }),
@@ -107,7 +116,7 @@ const droneList = [
     name: 'АПУ-4',
     researchObject: 'КП-1',
     status: 'Ожидание',
-    connectionQuality: 1,
+    connectionQuality: 2,
     battery: 30,
     startUpTime: 900
   })

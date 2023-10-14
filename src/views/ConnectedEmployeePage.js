@@ -19,11 +19,11 @@ function renderConnectedEmployeePage() {
 
   for (let i = 0; i < droneList.length; i++) {
     let colorWebSVG = 'black'
-    if (droneList[i].connectionQuality === 1) {
+    if (droneList[i].connectionQuality === 2) {
       colorWebSVG = 'var(--active-green-dark)'
-    } else if (droneList[i].connectionQuality === 2) {
+    } else if (droneList[i].connectionQuality === 1) {
       colorWebSVG = '#adc584'
-    } else if (droneList[i].connectionQuality === 3) {
+    } else if (droneList[i].connectionQuality === 0) {
       colorWebSVG = '#7b838a'
     }
     let currentColor = {
@@ -75,7 +75,7 @@ function renderConnectedEmployeePage() {
       overflow-y: none;
     }
     .hero-text {
-      padding: 0 5%;
+      padding: 15px 5%;
     }
     .choice-list {
       display: grid;
