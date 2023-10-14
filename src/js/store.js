@@ -36,11 +36,11 @@ class Device {
     }
 
     if (this.connectionQuality == 0) {
-      this.connectionQualityText = ''
+      this.connectionQualityText = 'нет связи'
     } else if (this.connectionQuality == 1) {
-      this.connectionQualityText = ''
+      this.connectionQualityText = 'среднее'
     } else if (this.connectionQuality == 2) {
-      this.connectionQualityText = 'средне-стабильное'
+      this.connectionQualityText = 'отличное'
     }
   }
 
