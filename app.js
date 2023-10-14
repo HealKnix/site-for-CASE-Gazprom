@@ -10,4 +10,4 @@ function setUserAuth() {
   isUserAuth = confirm('Авторизоваться?')
 }
 
-renderControlDevicePage(droneList[3])
+renderHomePage()
