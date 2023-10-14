@@ -53,11 +53,13 @@ function renderTheMeasuredDataPage() {
         <span>-</span>
         <span>-</span>
         <div id='list-data-sending'>
-          <span></span>
+          <span>${droneList[i].battery < 100 ? 'Передача данных' : 'Завершено'}</span>
           <div id='list-data-sending__loader'>
             <span id="list-data-sending__loader__percentage">${droneList[i].battery}%</span>
             <svg width="150" height="150" style="transform: rotate(-90deg)">
-              <circle class="myCircle" cx="75" cy="75" r="37.5" fill="none" stroke="rgb(${currentColor.r}, ${currentColor.g}, ${currentColor.b})" stroke-width="15" stroke-linecap="round" />
+              <circle class="myCircle" cx="75" cy="75" r="37.5" fill="none" stroke="rgb(${
+                currentColor.r
+              }, ${currentColor.g}, ${currentColor.b})" stroke-width="15" stroke-linecap="round" />
             </svg>
           </div>
         </div>
@@ -148,6 +150,19 @@ function renderTheMeasuredDataPage() {
       height: 100%;
     }
 
+    #list-data-sending {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      width: 100%;
+    }
+    #list-data-sending > span {
+      color: var(--white);
+    }
+
+    #list-data-sending__loader {
+      position: relative;
+    }
     #list-data-sending__loader__percentage {
       position: absolute;
       left: 50%;
