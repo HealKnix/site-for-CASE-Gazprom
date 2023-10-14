@@ -38,7 +38,7 @@ function renderControlDevicePage(currentDevice) {
         <span>Предустановленные настройки</span>
         <span>Макс. удалённость от точки запуска - 400 м</span>
         <span>Макс. скорость - 20 км/ч</span>
-        <span>Макс. время передвижения - 45 миню</span>
+        <span>Макс. время передвижения - 45 мин.</span>
       </div>
       <div class ="control__monitor">
         <div class="row-options">
