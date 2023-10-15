@@ -172,6 +172,11 @@ function renderTheMeasuredDataPage() {
       transform: translate3d(-50%, -50%, 0);
     }
 
+    @media (width < 1892px) {
+      #list-data-sending > span {
+        width: min-content;
+      }
+    }
     @media (width < 685px) {
       hero {
         overflow-y: auto;

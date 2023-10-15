@@ -7,7 +7,7 @@ function renderSelectingWorkScenarioPage() {
     <ul style='z-index: 1'>
       <li class='choice-list'>
         <div class='li__item-wrapper'>
-          Выберите устройство
+          Устройство
         </div>
         <div class='li__item-wrapper'>
           <dropdown-menu placeholder='Устройство' id='choice-drone' value='' context='choice.device'>
@@ -22,7 +22,7 @@ function renderSelectingWorkScenarioPage() {
       </li>
       <li class='choice-list'>
         <div class='li__item-wrapper'>
-          Выберите объект исследования
+          Объект исследования
         </div>
         <div class='li__item-wrapper'>
           <dropdown-menu placeholder='Объект исследования' id='choice-object' value='' context='choice.researchObject'>
@@ -35,7 +35,7 @@ function renderSelectingWorkScenarioPage() {
       </li>
       <li class='choice-list'>
         <div class='li__item-wrapper'>
-          Выберите сценарий работы
+          Сценарий работы
         </div>
         <div class='li__item-wrapper'>
           <dropdown-menu class='invert' placeholder='Сценарий работы' id='choice-scenario' value='' context='choice.workScenario'>
