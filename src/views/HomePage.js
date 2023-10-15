@@ -2,7 +2,7 @@ function renderHomePage() {
   content.innerHTML = /*html*/ `
     <h1 class="hero-text">Будущее за технологиями</h1>
 
-    <div class="hero__iner">
+    <div class="hero__content">
       <h2 class="info-text">
         Начните использовать возможности передовых устройств для&nbsp;оптимизации производственного
         процесса
@@ -12,7 +12,10 @@ function renderHomePage() {
     </div>
   `
   setStyleCSS(/*css*/ `
-    .hero__iner {
+    .hero-text{
+      padding: 15px 0;
+    }
+    .hero__content {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
