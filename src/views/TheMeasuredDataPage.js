@@ -131,7 +131,7 @@ function renderTheMeasuredDataPage() {
     .list__wrapper {
       display: flex;
       flex-direction: column;
-      height: 100%;
+      overflow-y: hidden;
     }
 
     .choice-list-info {
