@@ -75,7 +75,7 @@ header>.menu {
   user-select: none;
 }
 
-.menu>a {
+.menu>img {
   margin-right: 30px;
   cursor: pointer;
 }
