@@ -14,19 +14,22 @@ function renderTheMeasuredDataPage() {
 
     <h1 class="hero-text" style='z-index: 1'>Измеренные данные</h1>
 
-    <ul id='list-devices' style='z-index: 1'>
-      <li class='choice-list' style='min-height: 50px; z-index: 1'>
-        <div></div>
-        <div></div>
-        <span>Т, °С</span>
-        <span>Vв, м/с</span>
-        <span>Tv, n</span>
-        <span>H₂S, %</span>
-        <span>CH4, %</span>
-        <span>S, м²</span>
-        <div></div>
-      </li>
-    </ul>
+    <div class="list__wrapper" style='z-index: 1'>
+      <ul id='list-devices-info'>
+        <li class='choice-list-info'>
+          <div></div>
+          <div></div>
+          <span>Т, °С</span>
+          <span>Vв, м/с</span>
+          <span>Tv, n</span>
+          <span>H₂S, %</span>
+          <span>CH4, %</span>
+          <span>S, м²</span>
+          <div></div>
+        </li>
+      </ul> 
+      <ul id='list-devices' style='z-index: 1'></ul>
+    </div>
   `
 
   for (let i = 0; i < droneList.length; i++) {
@@ -125,6 +128,27 @@ function renderTheMeasuredDataPage() {
       z-index: 0;
     }
 
+    .list__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .choice-list-info {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+      min-height: 50px;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      margin: 0;
+      padding: 0 5%;
+      border-bottom: 2px solid #333333aa;
+    }
+    #list-devices-info {
+      min-height: 25px
+    }
+
     #list-devices {
       width: 100%;
       height: 100%;
@@ -177,6 +201,17 @@ function renderTheMeasuredDataPage() {
         width: min-content;
       }
     }
+    @media (width < 1120px) {
+      .choice-list {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        min-height: 500px;
+        padding: 25px 0;
+      }
+      #list-data-sending {
+        justify-content: center;
+      }
+    }
     @media (width < 685px) {
       hero {
         overflow-y: auto;
@@ -189,14 +224,6 @@ function renderTheMeasuredDataPage() {
         grid-template-columns: 1fr;
         grid-auto-rows: 1fr;
         min-height: auto;
-      }
-    }
-    @media (width < 1120px) {
-      .choice-list {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 1fr;
-        min-height: 500px;
-        padding: 25px 0;
       }
     }
   `)
