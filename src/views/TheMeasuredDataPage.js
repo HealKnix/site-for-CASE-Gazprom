@@ -131,6 +131,7 @@ function renderTheMeasuredDataPage() {
     .list__wrapper {
       display: flex;
       flex-direction: column;
+      height: 100%;
     }
 
     .choice-list-info {
@@ -143,7 +144,6 @@ function renderTheMeasuredDataPage() {
       font-size: 18px;
       margin: 0;
       padding: 0 5%;
-      border-bottom: 2px solid #333333aa;
     }
     #list-devices-info {
       min-height: 25px
