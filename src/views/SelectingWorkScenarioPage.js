@@ -95,7 +95,7 @@ function renderSelectingWorkScenarioPage() {
       z-index: 0;
     }
 
-    @media (width < 685px) {
+    @media (width < 780px) {
       hero {
         overflow-y: auto;
         justify-content: inherit;
@@ -112,6 +112,7 @@ function renderSelectingWorkScenarioPage() {
         margin-bottom: 25px;
       }
       dropdown-menu {
+        max-width: 100%;
         min-height: 55px;
       }
       dropdown-menu[focus].invert {
@@ -119,6 +120,7 @@ function renderSelectingWorkScenarioPage() {
         top: -350px;
       }
       #btn-start {
+        width: 100%;
         margin-bottom: 25px;
       }
     }
