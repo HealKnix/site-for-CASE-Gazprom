@@ -7,7 +7,12 @@ function setStyleCSS(styles) {
 }
 
 function setUserAuth() {
-  isUserAuth = confirm('Авторизоваться?')
+  if (isUserAuth) {
+    isUserAuth = !confirm('Выйти?')
+  } else {
+    isUserAuth = confirm('Авторизоваться?')
+  }
+
   if (isUserAuth) {
     document.getElementById('img_user').setAttribute('src', 'src/img/user-logout.svg')
   } else {
