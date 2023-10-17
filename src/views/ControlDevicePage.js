@@ -76,11 +76,11 @@ function renderControlDevicePage(currentDevice) {
         </div>
         <div id="mini-map"></div>
         <div id="statistic">
-          <span>P: 200 м</span>
-          <span>Скор.: 10 км/ч</span>
-          <span>T: 19°C</span>
-          <span>Vв: 5 м/с</span>
-          <span>H₂S: 10 мг/м³</span>
+          <span>P:&nbsp;200 м</span>
+          <span>Скор.:&nbsp;10 км/ч</span>
+          <span>T:&nbsp;19°C</span>
+          <span>Vв:&nbsp;5 м/с</span>
+          <span>H₂S:&nbsp;10 мг/м³</span>
         </div>
         <div id="focus">
           <svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250.29 251.76">
