@@ -48,7 +48,14 @@ function renderTheMeasuredDataPage() {
     document.querySelector('#list-devices').innerHTML += /*html*/ `
       <li class='choice-list' style='z-index: 1'>
         <div id='list-name'>${droneList[i].name}</div>
-        <div id='list-img' style='background: url(${droneList[i].imageUrl}) no-repeat center'></div>
+        <div
+          id='list-img'
+          style='
+            height: 85%;
+            background: url(${droneList[i].imageUrl}) no-repeat center;
+            background-size: contain;
+          '
+          ></div>
         <span>-</span>
         <span>-</span>
         <span>-</span>

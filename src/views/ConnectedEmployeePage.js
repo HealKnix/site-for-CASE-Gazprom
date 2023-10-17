@@ -41,7 +41,14 @@ function renderConnectedEmployeePage() {
     document.querySelector('#list-devices').innerHTML += /*html*/ `
       <li class='choice-list' style='z-index: 1'>
         <div id='list-name'>${droneList[i].name}</div>
-        <div id='list-img' style='background: url(${droneList[i].imageUrl}) no-repeat center'></div>
+        <div
+          id='list-img'
+          style='
+            height: 85%;
+            background: url(${droneList[i].imageUrl}) no-repeat center;
+            background-size: contain;
+          '
+          ></div>
         <div id='list-status'>Статус: ${droneList[i].researchObject} <br> (${droneList[i].status})</div>
 
         <svg id='list-connect' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
