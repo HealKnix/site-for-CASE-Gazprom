@@ -1,4 +1,5 @@
 .alert-menu {
+  pointer-events: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +18,7 @@
 
 .alert-menu.show {
   transform: translate3d(-50%, 15px, 0);
-  box-shadow: 0 8px 15px #d8d7ff88;
+  box-shadow: 0 8px 30px #f54b6433;
 }
 
 .alert-menu>span {
