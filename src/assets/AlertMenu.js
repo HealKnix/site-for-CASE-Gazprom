@@ -1,3 +1,5 @@
+let showStart, showEnd
+
 function showAlertMenu(text) {
   let html = /*html*/ `
     <div class="alert-menu">
@@ -9,11 +11,13 @@ function showAlertMenu(text) {
 
   alertMenu.innerHTML = html
 
-  setTimeout(() => {
+  clearTimeout(showEnd)
+
+  showStart = setTimeout(() => {
     alertMenu.children[0].classList.add('show')
   }, 0)
 
-  setTimeout(() => {
+  showEnd = setTimeout(() => {
     alertMenu.children[0].classList.remove('show')
-  }, 1500)
+  }, 2000)
 }
