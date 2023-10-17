@@ -53,6 +53,7 @@ function renderSelectingWorkScenarioPage() {
     <button
       id="btn-start"
       style='z-index: 0'
+      onclick="showAlertMenu('В разработке...')"
       disabled>
       Запуск
     </button>
