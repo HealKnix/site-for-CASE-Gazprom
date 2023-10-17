@@ -26,9 +26,9 @@ function renderHomePage() {
 }
 
 function checkUserAuthAndRedirect() {
-  if (!isUserAuth) {
-    showAlertMenu('Вы не авторизовались')
-    return
-  }
+  // if (!isUserAuth) {
+  //   showAlertMenu('Вы не авторизовались')
+  //   return
+  // }
   renderSelectingWorkScenarioPage()
 }
