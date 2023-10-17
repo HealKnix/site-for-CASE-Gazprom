@@ -348,6 +348,21 @@ function renderControlDevicePage(currentDevice) {
       border-radius: 50%;
       border: 5px solid black;
     }
+
+    @media (width < 1300px) {
+      .control__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        overflow-y: auto;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
   `)
   checkboxUpdate()
 }
