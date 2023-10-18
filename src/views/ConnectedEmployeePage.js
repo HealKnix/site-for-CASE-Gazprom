@@ -124,7 +124,6 @@ function renderConnectedEmployeePage() {
       height: 100%;
       background-color: #000000bb;
       backdrop-filter: blur(10px);
-      overflow-y: auto;
     }
     #list-devices::-webkit-scrollbar {
       width: 4px;
@@ -152,8 +151,8 @@ function renderConnectedEmployeePage() {
       justify-content: center;
       align-items: center;
       position: relative;
-      width: 75px;
-      height: 35px;
+      width: calc(var(--index) * 5);
+      height: calc(var(--index) * 2);
       border: 2px solid white;
       border-radius: 7.5px;
       overflow: ;
@@ -192,7 +191,32 @@ function renderConnectedEmployeePage() {
       background-color: #0b886d;
     }
 
-    @media (width < 685px) {
+    @media (width < 1300px) {
+      .choice-list {
+        gap: 0;
+      }
+      .choice-list > * {
+        font-size: calc(var(--index) * 0.6);
+      }
+      #list-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 70%;
+      }
+      .choice-list > button {
+        width: auto;
+        height: fit-content;
+        padding: 15px;
+        font-size: 18px;
+      }
+      #list-connect {
+        width: calc(var(--index) * 3);
+        height: calc(var(--index) * 3);
+      }
+    }
+    @media (width < 810px) {
       hero {
         overflow-y: auto;
         justify-content: inherit;
@@ -205,13 +229,8 @@ function renderConnectedEmployeePage() {
         grid-auto-rows: 1fr;
         min-height: auto;
       }
-    }
-    @media (width < 1120px) {
-      .choice-list {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 1fr;
-        min-height: 500px;
-        padding: 25px 0;
+      .choice-list > * {
+        font-size: calc(var(--index) * 1);
       }
     }
   `)

@@ -149,7 +149,6 @@ function renderControlDevicePage(currentDevice) {
       width: 100%;
       height: 100%;
       background-color: #333;
-      overflow-y: auto;
     }
     .control__monitor {
       --index: 1vw + 1vh;
@@ -180,7 +179,7 @@ function renderControlDevicePage(currentDevice) {
       text-align: center;
       margin-left: 15px;
       margin-right: 15px;
-      margin-bottom: 150px;
+      margin-bottom: 85px;
     }
     .control__tooling {
       flex-grow: 1;
@@ -212,7 +211,7 @@ function renderControlDevicePage(currentDevice) {
     }
     .control__tooling > span:first-child {
       text-align: center;
-      margin-bottom: 150px;
+      margin-bottom: 85px;
     }
     .row-options {
       display: grid;
@@ -238,14 +237,16 @@ function renderControlDevicePage(currentDevice) {
     }
     .row-options > .option > svg {
       cursor: pointer;
+      width: calc(var(--index) * 2);
+      height: calc(var(--index) * 2);
     }
     #battery {
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
-      width: 75px;
-      height: 35px;
+      width: calc(var(--index) * 5);
+      height: calc(var(--index) * 2);
       border: 2px solid white;
       border-radius: 7.5px;
       overflow: ;
@@ -278,8 +279,8 @@ function renderControlDevicePage(currentDevice) {
     }
     #mini-map {
       position: absolute;
-      width: 260px;
-      height: 175px;
+      width: calc(var(--index) * 20);
+      height: calc(var(--index) * 13);
       right: 15px;
       bottom: 15px;
       background: url('src/img/mini-map.png') no-repeat;
@@ -303,8 +304,8 @@ function renderControlDevicePage(currentDevice) {
     }
     #focus {
       position: absolute;
-      width: 200px;
-      height: 200px;
+      width: calc(var(--index) * 10);
+      height: calc(var(--index) * 10);
       left: 50%;
       top: 50%;
       transform: translate3d(-50%, -50%, 0);
@@ -325,8 +326,8 @@ function renderControlDevicePage(currentDevice) {
     #record_btn {
       cursor: pointer;
       position: absolute;
-      width: 75px;
-      height: 75px;
+      width: calc(var(--index) * 4);
+      height: calc(var(--index) * 4);
       right: 25px;
       top: 50%;
       transform: translate3d(0, -50%, 0);
@@ -340,17 +341,17 @@ function renderControlDevicePage(currentDevice) {
       display: block;
       content: '';
       position: absolute;
-      width: 82.5px;
-      height: 82.5px;
+      width: calc(var(--index) * 5);
+      height: calc(var(--index) * 5);
       left: 50%;
       top: 50%;
       transform: translate3d(-50%, -50%, 0);
       border-radius: 50%;
-      border: 5px solid black;
+      border: 5px solid #00000088;
     }
 
-    @media (width < 1300px) {
-      .control__wrapper {
+    @media (width < 1450px) {
+      /* .control__wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -361,6 +362,35 @@ function renderControlDevicePage(currentDevice) {
         overflow-y: auto;
         flex-wrap: wrap;
         flex-direction: column;
+      } */
+      .control__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: max-content;
+      }
+      .control__monitor {
+        min-height: 600px;
+      }
+      .control__presets {
+        height: auto;
+      }
+      .control__presets > span:first-child {
+        padding: 25px 0;
+        margin: 0;
+      }
+      .control__tooling {
+        max-width: 400px;
+        height: auto;
+      }
+      .control__tooling > span:first-child {
+        text-align: center;
+        padding: 25px 0;
+        margin: 0;
+      }
+      #statistic > span {
+        font-size: 18px;
       }
     }
   `)
