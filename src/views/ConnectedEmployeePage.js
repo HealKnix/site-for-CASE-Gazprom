@@ -1,12 +1,12 @@
 function renderConnectedEmployeePage() {
   let colorFull = {
-    r: 125,
+    r: 140,
     g: 255,
     b: 0
   }
   let colorEmpty = {
     r: 255,
-    g: 25,
+    g: 64,
     b: 0
   }
   content.innerHTML = /*html*/ `
@@ -29,13 +29,13 @@ function renderConnectedEmployeePage() {
     let currentColor = {
       r:
         (colorFull.r * droneList[i].battery) / 100 +
-        (colorEmpty.r - (colorEmpty.r * droneList[i].battery) / 100),
+        (colorEmpty.r * (100 - droneList[i].battery)) / 100,
       g:
         (colorFull.g * droneList[i].battery) / 100 +
-        (colorEmpty.g - (colorEmpty.g * droneList[i].battery) / 100),
+        (colorEmpty.g * (100 - droneList[i].battery)) / 100,
       b:
         (colorFull.b * droneList[i].battery) / 100 +
-        (colorEmpty.b - (colorEmpty.b * droneList[i].battery) / 100)
+        (colorEmpty.b * (100 - droneList[i].battery)) / 100
     }
 
     document.querySelector('#list-devices').innerHTML += /*html*/ `

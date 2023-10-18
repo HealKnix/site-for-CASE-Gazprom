@@ -1,12 +1,12 @@
 function renderControlDevicePage(currentDevice) {
   let colorFull = {
-    r: 125,
+    r: 140,
     g: 255,
     b: 0
   }
   let colorEmpty = {
     r: 255,
-    g: 25,
+    g: 64,
     b: 0
   }
   let currentColor = {

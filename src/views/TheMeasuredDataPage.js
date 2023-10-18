@@ -210,28 +210,72 @@ function renderTheMeasuredDataPage() {
       }
     }
     @media (width < 1120px) {
+      .choice-list-info {
+        display: none;
+      }
+      .choice-list > * {
+        font-size: calc(var(--index) * 0.6);
+      }
       .choice-list {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 1fr;
-        min-height: 500px;
-        padding: 25px 0;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 125px;
+        gap: 0;
+      }
+      .choice-list > span:nth-child(3)::after {
+        display: block;
+        position: absolute;
+        content: 'Т, °С';
+        width: max-content;
+        left: calc(100% + 15px);
+        top: 0;
+      }
+      .choice-list > span:nth-child(4)::after {
+        display: block;
+        position: absolute;
+        content: 'Vв, м/с';
+        width: max-content;
+        left: calc(100% + 15px);
+        top: 0;
+      }
+      .choice-list > span:nth-child(5)::after {
+        display: block;
+        position: absolute;
+        content: 'Tv, n';
+        width: max-content;
+        left: calc(100% + 15px);
+        top: 0;
+      }
+      .choice-list > span:nth-child(6)::after {
+        display: block;
+        position: absolute;
+        content: 'H₂S, %';
+        width: max-content;
+        left: calc(100% + 15px);
+        top: 0;
+      }
+      .choice-list > span:nth-child(7)::after {
+        display: block;
+        position: absolute;
+        content: 'CH4, %';
+        width: max-content;
+        left: calc(100% + 15px);
+        top: 0;
+      }
+      .choice-list > span:nth-child(8)::after {
+        display: block;
+        position: absolute;
+        content: 'S, м²';
+        width: max-content;
+        left: calc(100% + 15px);
+        top: 0;
       }
       #list-data-sending {
         justify-content: center;
       }
     }
-    @media (width < 685px) {
-      hero {
-        overflow-y: auto;
-        justify-content: inherit;
-      }
-      .hero-text {
-        margin-top: 25px;
-      }
+    @media (width < 580px) {
       .choice-list {
         grid-template-columns: 1fr;
-        grid-auto-rows: 1fr;
-        min-height: auto;
       }
     }
   `)

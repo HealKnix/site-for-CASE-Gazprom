@@ -103,7 +103,7 @@ const droneList = [
     researchObject: 'КП-4',
     status: 'Готовность',
     connectionQuality: 2,
-    battery: 100,
+    battery: 5,
     startUpTime: 0
   }),
   new APU1({
