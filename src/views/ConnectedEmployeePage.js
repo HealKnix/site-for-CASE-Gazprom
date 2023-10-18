@@ -124,6 +124,7 @@ function renderConnectedEmployeePage() {
       height: 100%;
       background-color: #000000bb;
       backdrop-filter: blur(10px);
+      overflow-y: auto;
     }
     #list-devices::-webkit-scrollbar {
       width: 4px;
