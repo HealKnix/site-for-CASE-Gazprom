@@ -153,9 +153,6 @@ function renderTheMeasuredDataPage() {
       margin: 0;
       padding: 0 5%;
     }
-    #list-devices-info {
-      min-height: 25px
-    }
 
     #list-devices {
       width: 100%;
@@ -210,7 +207,18 @@ function renderTheMeasuredDataPage() {
       }
     }
     @media (width < 1120px) {
-      .choice-list-info {
+      hero {
+        overflow-y: auto;
+      }
+      #list-devices {
+        height: fit-content;
+        overflow-y: initial;
+      }
+      .list__wrapper {
+        height: calc(100% + 25px);
+        overflow: initial;
+      }
+      #list-devices-info {
         display: none;
       }
       .choice-list > * {
@@ -218,7 +226,7 @@ function renderTheMeasuredDataPage() {
       }
       .choice-list {
         grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 125px;
+        grid-auto-rows: 1fr;
         gap: 0;
       }
       .choice-list > span:nth-child(3)::after {
