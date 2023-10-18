@@ -76,11 +76,11 @@ function renderControlDevicePage(currentDevice) {
         </div>
         <div id="mini-map"></div>
         <div id="statistic">
-          <span>P:&nbsp;200 м</span>
-          <span>Скор.:&nbsp;10 км/ч</span>
+          <span>P:&nbsp;200&nbsp;м</span>
+          <span>Скор.:&nbsp;10&nbsp;км/ч</span>
           <span>T:&nbsp;19°C</span>
-          <span>Vв:&nbsp;5 м/с</span>
-          <span>H₂S:&nbsp;10 мг/м³</span>
+          <span>Vв:&nbsp;5&nbsp;м/с</span>
+          <span>H₂S:&nbsp;10&nbsp;мг/м³</span>
         </div>
         <div id="focus">
           <svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250.29 251.76">
@@ -138,6 +138,15 @@ function renderControlDevicePage(currentDevice) {
       padding: 0;
       overflow-y: none;
     }
+    hero::-webkit-scrollbar {
+      width: 4px;
+    }
+    hero::-webkit-scrollbar-thumb {
+      background-color: var(--active-green-dark);
+    }
+    hero::-webkit-scrollbar-track {
+      background-color: #000000bb;
+    }
     .hero-text {
       padding: 15px 5%;
     }
@@ -177,6 +186,7 @@ function renderControlDevicePage(currentDevice) {
     .control__presets > span:first-child {
       padding: 0;
       text-align: center;
+      font-weight: 700;
       margin-left: 15px;
       margin-right: 15px;
       margin-bottom: 85px;
@@ -210,6 +220,7 @@ function renderControlDevicePage(currentDevice) {
       color: var(--white);
     }
     .control__tooling > span:first-child {
+      font-weight: 700;
       text-align: center;
       margin-bottom: 85px;
     }
@@ -234,6 +245,9 @@ function renderControlDevicePage(currentDevice) {
       color: var(--white);
       font-size: 18px;
       font-weight: 600;
+    }
+    .row-options > .option > #connectText {
+      margin-left: 50px;
     }
     .row-options > .option > svg {
       cursor: pointer;
@@ -390,7 +404,13 @@ function renderControlDevicePage(currentDevice) {
         margin: 0;
       }
       #statistic > span {
-        font-size: 18px;
+        font-size: calc(var(--index) * 0.75);
+      }
+      #focus::after {
+        font-size: calc(var(--index) * 0.75);
+      }
+      .row-options > .option > span {
+        font-size: calc(var(--index) * 0.75);
       }
     }
   `)

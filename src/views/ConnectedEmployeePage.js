@@ -222,6 +222,20 @@ function renderConnectedEmployeePage() {
         overflow-y: auto;
         justify-content: inherit;
       }
+      hero::-webkit-scrollbar {
+        width: 4px;
+      }
+      hero::-webkit-scrollbar-thumb {
+        background-color: var(--active-green-dark);
+      }
+      hero::-webkit-scrollbar-track {
+        background-color: #000000bb;
+      }
+      #list-devices {
+        overflow-y: initial;
+        width: 100vw;
+        height: fit-content;
+      }
       .hero-text {
         margin-top: 25px;
       }
@@ -229,9 +243,11 @@ function renderConnectedEmployeePage() {
         grid-template-columns: 1fr;
         grid-auto-rows: 1fr;
         min-height: auto;
+        padding: 15px 0;
       }
       .choice-list > * {
         font-size: calc(var(--index) * 1);
+        padding: 5px 0;
       }
     }
   `)
